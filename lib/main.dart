@@ -43,7 +43,9 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+
           Text('A random idea:'),
+
           BigCard(pair: pair),
 
           ElevatedButton(
@@ -53,6 +55,7 @@ class MyHomePage extends StatelessWidget {
             },
             child: Text('Next'),
           ),
+
         ],
       ),
     );
@@ -79,7 +82,7 @@ class BigCard extends StatelessWidget {
       elevation: 10,
       child: Padding(
         padding: const EdgeInsets.all(20),
-        child: Text(pair.asLowerCase, style: style),
+        child: Text(pair.asPascalCase, style: style),
       ),
     );
   }
